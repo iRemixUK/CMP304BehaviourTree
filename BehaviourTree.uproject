@@ -2,5 +2,16 @@
 	"FileVersion": 3,
 	"EngineAssociation": "5.0",
 	"Category": "",
-	"Description": ""
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "BehaviourTree",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine",
+				"AIModule"
+			]
+		}
+	]
 }
