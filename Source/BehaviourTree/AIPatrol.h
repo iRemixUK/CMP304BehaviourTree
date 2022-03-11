@@ -24,6 +24,6 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	UPROPERTY(EditAnywhere, Category = AI)
-		class UBehaviorTree* BehaviourTree;
+		class UBehaviorTree* BehaviorTree;
 
 };
