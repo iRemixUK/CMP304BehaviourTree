@@ -3,6 +3,19 @@
 
 #include "AIPatrolController.h"
 
+AAIPatrolController::AAIPatrolController()
+{
+	// Initialise blackboard and behavior tree
+	BehaviorComp = CreateDefaultSubobject<UBehaviorTreeComponent>(TEXT("BehaviorComp"));
+	BlackboardComp = CreateDefaultSubobject<UBlackboardComponent>(TEXT("BlackboardComp"));
+
+	// Initialise blackboard keys
+	PlayerKey = "Target";
+	LocationToGoKey = "LocationToGo";
+
+	CurrentPatrolPoint = 0;
+}
+
 void AAIPatrolController::OnPossess(APawn* pawn)
 {
 	Super::OnPossess(pawn);
@@ -22,19 +35,6 @@ void AAIPatrolController::OnPossess(APawn* pawn)
 
 		BehaviorComp->StartTree(*AICharacter->BehaviorTree);
 	}
-}
-
-AAIPatrolController::AAIPatrolController()
-{
-	// Initialise blackboard and behavior tree
-	BehaviorComp = CreateDefaultSubobject<UBehaviorTreeComponent>(TEXT("BehaviorComp"));
-	BlackboardComp = CreateDefaultSubobject<UBlackboardComponent>(TEXT("BlackboardComp"));
-
-	// Initialise blackboard keys
-	PlayerKey = "Target";
-	LocationToGoKey = "LocationToGo";
-
-	CurrentPatrolPoint = 0;
 }
 
 void AAIPatrolController::SetPlayerCaught(APawn* pawn)
