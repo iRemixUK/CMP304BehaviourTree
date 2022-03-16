@@ -27,10 +27,10 @@ class BEHAVIOURTREE_API AAIPatrolController : public AAIController
 		UBlackboardComponent* BlackboardComp;
 
 		// Blackboard keys
-		UPROPERTY(EditDefaultsOnly, Category = AI)
+		UPROPERTY(EditAnywhere, Category = AI)
 		FName LocationToGoKey;
 
-		UPROPERTY(EditDefaultsOnly, Category = AI)
+		UPROPERTY(EditAnywhere, Category = AI)
 		FName PlayerKey;
 		 
 		TArray<AActor*> PatrolPoints;

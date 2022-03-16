@@ -14,6 +14,7 @@ EBTNodeResult::Type UBTSelectPatrolPoint::ExecuteTask(UBehaviorTreeComponent& Ow
 	{
 		// Get blackboard component
 		UBlackboardComponent* BlackboardComp = AICon->GetBlackboardComp();
+		BlackboardComp->ClearValue("Target");
 
 		AAIPatrolPoint* CurrentPoint = Cast<AAIPatrolPoint>(BlackboardComp->GetValueAsObject("LocationToGo"));
 
