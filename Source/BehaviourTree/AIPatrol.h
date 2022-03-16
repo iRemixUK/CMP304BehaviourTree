@@ -30,6 +30,7 @@ public:
 		class UPawnSensingComponent* PawnSensingComp;
 
 private:
+	UFUNCTION()
 	void OnPlayerCaught(APawn* pawn);
 
 };
