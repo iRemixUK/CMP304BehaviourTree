@@ -36,8 +36,6 @@ class BEHAVIOURTREE_API AAIPatrolController : public AAIController
 		TArray<AActor*> PatrolPoints;
 
 		virtual void OnPossess(APawn* pawn) override;
-
-		int32 CurrentPatrolPoint = 0;
 	
 public:
 
@@ -47,4 +45,6 @@ public:
 	// Getter functions
 	FORCEINLINE UBlackboardComponent* GetBlackboardComp() const { return BlackboardComp; }
 	FORCEINLINE TArray<AActor*> GetPatrolPoints() const { return PatrolPoints; }
+
+	int32 CurrentPatrolPoint = 0;
 };
